@@ -356,11 +356,6 @@ For security issues, use [private reporting](SECURITY.md).
 
 ---
 
-### Future open-source plans
-
-I plan to release eligible Amble-owned code under Apache 2.0 when the
-repository reaches 20,000 GitHub stars, so that users can modify and work with it freely.
-
 This is Amble's official repository for **downloads, release notes, and
 feedback**. Application source is maintained privately. **Amble is proprietary**;
 see the [license notice](LICENSE), [EULA](https://www.amblecode.com/legal/eula.txt), and
