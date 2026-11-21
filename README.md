@@ -13,7 +13,7 @@
   <a href="https://www.amblecode.com/docs/quickstart.html">Get started</a> ·
   <a href="TEAMWORK.md">Team guide</a> ·
   <a href="https://www.amblecode.com">Website</a> ·
-  <a href="https://discord.gg/eGjaBGJgp">Discord</a>
+  <a href="https://discord.gg/A3JXh8GHWn">Discord</a>
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
   <a href="https://x.com/BakhitJonathan">
     <img src="https://img.shields.io/badge/%40BakhitJonathan-555?style=flat&logo=x" alt="Jonathan Bakhit on X">
   </a>
-  <a href="https://discord.gg/eGjaBGJgp">
+  <a href="https://discord.gg/A3JXh8GHWn">
     <img src="https://img.shields.io/badge/Discord-555?style=flat&logo=discord" alt="Amble Discord community">
   </a>
   <a href="https://www.linkedin.com/in/jonathanbakhit/">
@@ -418,7 +418,7 @@ list version-specific changes and known limitations.
 
 [Report a bug](https://github.com/AmbleCode/amble-releases/issues/new?template=bug_report.yml) ·
 [Request a feature](https://github.com/AmbleCode/amble-releases/issues/new?template=feature_request.yml) ·
-[Join Discord](https://discord.gg/eGjaBGJgp) ·
+[Join Discord](https://discord.gg/A3JXh8GHWn) ·
 [Read the docs](https://www.amblecode.com/docs/index.html)
 
 For security issues, use [private reporting](SECURITY.md).
