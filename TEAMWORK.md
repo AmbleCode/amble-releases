@@ -1,6 +1,6 @@
-# Build together in Lyre
+# Build together in Amble
 
-Lyre brings your team's agent conversations, project work and running apps into
+Amble brings your team's agent conversations, project work and running apps into
 one workflow. Give collaborators access to the projects they need, divide the
 work into clear tasks, and review the result together from connected devices.
 
@@ -18,11 +18,11 @@ does not grant development access.
 
 | Access | Who it is for | What it allows |
 | --- | --- | --- |
-| **Owner** | You or someone you trust to manage the computer through Lyre | Full Lyre host access, including settings and access management. |
+| **Owner** | You or someone you trust to manage the computer through Amble | Full Amble host access, including settings and access management. |
 | **Developer** | A collaborator working on selected projects | The approved projects' supported agent, source and configured app-service operations. It is not general host administration or unrestricted terminal access. |
 | **User / Viewer** | Someone trying an app | Interaction with the explicitly shared app, without access to source, agent conversations, terminals or host settings. |
 
-Developer project selection controls Lyre's project, source and session access.
+Developer project selection controls Amble's project, source and session access.
 Agent commands still execute with the host account's operating system permissions.
 Approve developers you trust with that execution access. Native desktop control
 is a separate capability available to developer connections on supporting builds;
@@ -94,7 +94,7 @@ a check that will show it is finished. For example:
 Use separate agent conversations for independent tasks. Give each agent the
 context it needs; opening another conversation does not automatically copy all
 other conversations into its prompt. Review existing conversations and pending
-requests before assigning more work. Lyre makes work visible, but task ownership
+requests before assigning more work. Amble makes work visible, but task ownership
 still needs to be agreed by the team.
 
 ### Choose a shared workspace or separate worktrees
@@ -154,10 +154,10 @@ selected shared apps and provides membership controls. It is not a developer
 group or a grant to read the team's code and conversations. Manage developer
 project grants separately.
 
-The host must stay awake, connected and running Lyre. Remote live app previews
+The host must stay awake, connected and running Amble. Remote live app previews
 require the applicable Pro entitlement; developer connection access and preview
-access are separate. See [plans](https://lyrestudio.net/#pricing) and
-[connection guidance](https://lyrestudio.net/docs/pairing.html).
+access are separate. See [plans](https://www.amblecode.com/#pricing) and
+[connection guidance](https://www.amblecode.com/docs/pairing.html).
 
 ## When something is missing
 
@@ -169,5 +169,5 @@ access are separate. See [plans](https://lyrestudio.net/#pricing) and
 | Two agents are changing the same files | Agree on one writer, stop or redirect the overlapping task, or move independent work into separate worktrees. |
 | A phone cannot connect or open the preview | Check the host's power, network, running app, current grant and remote preview entitlement. |
 
-[Back to Lyre Studio](README.md) ·
+[Back to Amble](README.md) ·
 [Report a problem](https://github.com/AmbleCode/amble-releases/issues/new?template=bug_report.yml)

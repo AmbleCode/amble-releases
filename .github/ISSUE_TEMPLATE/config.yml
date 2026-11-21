@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Installation and updates
     url: https://github.com/AmbleCode/amble-releases/blob/main/INSTALL.md
-    about: Choose a download and get help installing or updating Lyre.
+    about: Choose a download and get help installing or updating Amble.
   - name: Community questions
     url: https://discord.gg/A3JXh8GHWn
-    about: Ask a question or discuss your workflow with the Lyre community.
+    about: Ask a question or discuss your workflow with the Amble community.

@@ -135,7 +135,7 @@ More detail on each: [Choose your coding agent](FEATURES.md#your-choice-of-codin
 - [Use Claude Code from your phone](https://www.amblecode.com/docs/claude-code-from-phone.html).
 - [Use Codex from your phone](https://www.amblecode.com/docs/codex-from-phone.html).
 - [Share a local app with a tester](https://www.amblecode.com/docs/share-local-app-with-tester.html).
-- [Evaluate Amble with the facts and review guide](https://www.amblecode.com/docs/lyre-facts-and-review-guide.html).
+- [Evaluate Amble with the facts and review guide](https://www.amblecode.com/docs/amble-facts-and-review-guide.html).
 
 Check [current host and client availability](https://www.amblecode.com/docs/release-status.html)
 before trying a workflow. The review guide explains the running-host requirement,

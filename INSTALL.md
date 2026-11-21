@@ -100,11 +100,11 @@ Commands use the local home `~/.amble` by default. Use the same
 `--home` on every command when selecting another local host. For example:
 
 ```sh
-amble daemon start --home PATH_TO_LYRE_HOME
-amble status --home PATH_TO_LYRE_HOME
+amble daemon start --home PATH_TO_AMBLE_HOME
+amble status --home PATH_TO_AMBLE_HOME
 ```
 
-Replace `PATH_TO_LYRE_HOME` with a short absolute path outside your project
+Replace `PATH_TO_AMBLE_HOME` with a short absolute path outside your project
 repository, and use that same path on subsequent commands. `--host` selects an
 explicit remote endpoint or pairing URL; project paths then refer to the selected computer. See
 `amble --help` for supported connection formats.

@@ -1,5 +1,5 @@
 name: Bug report
-description: Tell us what went wrong in Lyre Studio.
+description: Tell us what went wrong in Amble.
 body:
   - type: markdown
     attributes:
@@ -8,7 +8,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: Lyre version
+      label: Amble version
       description: Find this in About. Include both host and client versions if they differ.
       placeholder: "Host: … / Client: …"
     validations:

@@ -1,5 +1,5 @@
 name: Feature request
-description: Tell us what would make Lyre more useful for your work.
+description: Tell us what would make Amble more useful for your work.
 body:
   - type: markdown
     attributes:
