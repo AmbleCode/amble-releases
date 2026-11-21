@@ -68,15 +68,34 @@ are building, all on **a computer you own**. You steer it from your phone.
   <a href="assets/amble-tour.mp4"><strong>▶ Watch a 30-second tour of the real workspace</strong></a>
 </p>
 
+## A thin client for your agentic development studio
+
+Amble keeps the work on **your computer**: projects, agents, terminals, builds and previews.
+Your phone, tablet or another computer is a proper **thin client** to that studio. It shows
+what is happening and lets you steer it, while nothing runs in an Amble cloud. These features
+exist to make remote development practical:
+
+- **Reach it your way.** Connect directly over your local network, VPN or Tailscale at no cost, or through an end-to-end encrypted relay on Premium and above. Pair a device once and it stays yours to revoke.
+- **See the running app, not a description of it.** Try the preview the agent started on your computer from your paired device. Local-network viewing is free; viewing over the relay needs Premium or above.
+- **Know when an agent needs you.** Activity groups work into **Needs your input**, **Ready to review** and **Working**, and notifications tell you when a task finishes. Looking at Activity never clears it.
+- **Review and decide from anywhere.** Read the actual diff in **Changes**, run checks in terminals, commit, and answer an agent's permission request without going back to your desk.
+- **Hand work between computers.** Send a file to another connected computer, or dispatch agent work to it and its available models.
+- **Take over the whole screen when you must.** Built-in remote desktop (early) shows and controls a connected computer, with consent for each session and no Docker, RDP server or gateway to set up.
+- **Share an app, not the code.** Invite a tester with a single-use link or QR code and revoke it at any time.
+
+The host computer must stay awake and connected, and each provider's accounts, installation
+and costs stay yours. Relay, remote viewing hours and other limits depend on your plan; see
+[plans](https://www.amblecode.com/#pricing) and the [release status](https://www.amblecode.com/docs/release-status.html).
+
 ## Key Features
 
 **Agents and models**
 
 - **Your coding agent, your model.** Run Claude Code, Codex, GitHub Copilot, OpenCode and Pi side by side, organized by project. Provider accounts, installation and model access vary by provider.
-- **Task modes.** Agent, Plan, Debug, Ask, Multitask and Orchestrate in one composer. Modes guide the request; they do not change permissions.
+- **One composer.** Send, steer, interrupt or queue a message while an agent works, and watch Usage and Context as it goes. Agents decide when to hand work to helper agents.
 - **Subagents.** Delegate independent parts of a task to helper agents, follow the children your conversation started, and review their results.
 - **Cloud and local models.** Connect provider accounts or API keys, or add Ollama, LM Studio, llama.cpp or a compatible local server. Browse a shared model catalog, set routes and see usage. No model weights are bundled.
-- **Bots.** Set up background specialist assistants with their own instructions and optional schedules (the built-in Amble Bots add-on, which you can switch off in Settings).
+- **Bots.** Named specialist assistants with their own instructions, computer rules, memory and schedules, working in the background while you are away. See [Bots](#bots-specialists-that-keep-working).
 
 **Build and review**
 
@@ -166,7 +185,7 @@ From an existing project folder, this example uses Codex to explain the project:
 
 ```sh
 amble project create .
-amble run --provider codex --cwd . --task-mode ask "Explain this project without changing files."
+amble run --provider codex --cwd . "Explain this project without changing files."
 amble ls
 ```
 
@@ -192,15 +211,15 @@ The CLI brings more of Amble's development workflow to your terminal:
 
 | Feature                    | How to use it                                                                                                                                                                                                                              |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Task modes**             | Use `amble run --task-mode plan` to plan a change, `debug` to investigate a failure, `ask` for questions, or `multitask` for useful delegation when the provider has the tools. Use `agent` to carry out a change.                          |
+| **Provider modes**         | Use `amble run --mode MODE` when your provider offers modes such as a plan mode. `amble provider ls` lists the modes each provider supports.                                                                                                |
 | **Separate Git worktrees** | Add `--new-workspace worktree --new-branch fix-login` to a run to work in a separate checkout. Reuse it later with `--workspace WORKSPACE_ID`.                                                                                             |
 | **Screenshot context**     | Send an image to an existing agent with `amble send AGENT_ID --image screenshot.png "Explain this screenshot."`, then review the transfer prompt. The selected provider must support images.                                                |
 | **App preview setup**      | Inspect your project with `amble preview inspect . --json`, review a configuration with `amble preview plan . --port 5173 --json`, and control workspace services with `amble script start` / `stop`. Agents and services stop independently. |
-| **Recurring agent tasks**  | Use `amble schedule create` with a cadence, provider and task mode; inspect run history and pause or resume the schedule. The host must stay running.                                                                                       |
+| **Recurring agent tasks**  | Use `amble schedule create` with a cadence and provider; inspect run history and pause or resume the schedule. The host must stay running.                                                                                       |
 | **Permission review**      | Use `amble permit ls` to see pending requests, then approve or deny a specific request after reviewing it.                                                                                                                                  |
 | **Host plugins**           | Use `amble plugin ls`, statically check a plugin with `amble plugin check`, and review available updates with `amble plugin update --all --check`. Install only code you trust.                                                               |
 
-Task modes guide the request; they do not change permissions. Preview viewing,
+Preview viewing,
 app-sharing invitations and whole-desktop control use the supported Amble clients.
 
 [**See complete CLI examples for these features →**](INSTALL.md#amble-features-from-the-terminal)
@@ -236,19 +255,13 @@ Available controls depend on the connection role and installed versions.
 
 [**Set up your team and follow a complete workflow →**](TEAMWORK.md)
 
-### Every agent, the right mode
+### Every agent, one composer
 
 Bring the coding agent you already use: **Claude Code, Codex, GitHub Copilot, OpenCode,
-and Pi** run side by side, organized by project. Pick a **task mode** in the composer:
-
-| Mode            | Use it to                                                    |
-| --------------- | ------------------------------------------------------------ |
-| **Agent**       | make the change end to end                                   |
-| **Plan**        | agree on an approach before any edits                        |
-| **Debug**       | investigate a failure step by step                           |
-| **Ask**         | get an answer without touching files                         |
-| **Multitask**   | hand parts of a task to helper agents                        |
-| **Orchestrate** | coordinate larger work across helpers and review it together |
+and Pi** run side by side, organized by project. One composer drives all of them. Send a
+message while an agent works and choose whether it **steers** the current turn, **queues**
+for the next, or **interrupts**. Agents decide when to delegate to helper agents, and a
+provider's own modes, such as a plan mode, stay available where it offers them.
 
 Run independent work in separate **Git worktrees**, queue follow-up messages, dictate
 by voice, and attach screenshots or files. Provider accounts, installation, and model
@@ -300,8 +313,7 @@ game you're building from your phone. Connect directly on your network or throug
 
 <p align="center">
   <img src="assets/iphone-files.png" alt="Browsing a project's files in Amble on iPhone" width="30%">&nbsp;
-  <img src="assets/iphone-publish.png" alt="The Publish flow for a web app in Amble on iPhone" width="30%">&nbsp;
-  <img src="assets/iphone-bots.png" alt="The Bots list in Amble on iPhone" width="30%">
+  <img src="assets/iphone-publish.png" alt="The Publish flow for a web app in Amble on iPhone" width="30%">
 </p>
 
 ### Your whole desktop, built in
@@ -320,6 +332,29 @@ use the app you shared, while source files, agent sessions, terminals, and compu
 settings stay private. Revoke access at any time. For a public URL, **opt-in public
 service links** require both your grant and an access token. Client support varies by
 platform and plan; see [plans](https://www.amblecode.com/#pricing).
+
+### Bots: specialists that keep working
+
+Create a **Bot**, name it, give it instructions and choose the context it can use. A Bot is a
+specialist assistant that keeps its own conversations, memories and research, and works when
+you ask or on a schedule, so a recurring job like a daily digest or a release-notes draft
+doesn't need you at the keyboard.
+
+<p align="center">
+  <img src="assets/iphone-bots.png" alt="The Bots list in Amble on iPhone: a research assistant, a daily digest, support triage and release notes, each ready to start a conversation" width="32%">
+</p>
+
+- **Their own computer rules.** A Bot runs on the computer its chat started on, with its own computer rules, a host egress filter and dry-run approvals for what it may do.
+- **Start from real events.** Start saved tasks from verified GitHub, Linear and Sentry events, and route work between Bots with @mentions.
+- **Schedules you can see.** Browse schedules in a calendar view. Recurring runs that would overlap skip, and the desktop stays awake while scheduled Bots run.
+- **Memory you review.** Bots keep research and memories on your host, and proposed learning is reviewed before it is saved.
+- **Connections you grant.** Each connected account or tool is enabled on its own, with its own Ask first setting. Creating a Bot grants none of them.
+- **Group them by project.** Keep related Bots together under one project.
+- **Add roles and goals (optional).** The separate **Amble Organization** add-on gives Bots roles and goals, such as a CEO, coordinators and workers, with advisory budgets. Roles grant no permissions.
+
+Bots run on your computer, so it must stay awake and connected. Connected accounts, browser
+control and posting to outside services need your explicit grant, and a Bot's name or
+instructions never grant them. Provider accounts and costs stay yours.
 
 ### It keeps working while you're away
 

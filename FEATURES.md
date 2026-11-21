@@ -21,10 +21,9 @@ review a response, and interact with your app while the host keeps working.
 ## Your choice of coding agent
 
 Use Claude Code, Codex, GitHub Copilot, OpenCode, or Pi, with the models and accounts
-your chosen provider supports. Choose a task mode for making a change, planning,
-debugging, or asking a question.
-
-Task modes include Agent, Plan, Debug, Ask, Multitask, and Orchestrate. Queue follow-ups, dictate, and attach files or screenshots through the existing composer. Provider support varies.
+your chosen provider supports. One composer drives them all: steer, queue, or interrupt
+a running agent, dictate, and attach files or screenshots. Agents decide when to delegate to
+helper agents, and a provider's own modes stay available where it offers them. Provider support varies.
 
 <p align="center">
   <a href="assets/features/03-agent-choice.gif"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/features/03-agent-choice.jpg"><source srcset="assets/features/03-agent-choice.gif" type="image/gif"><img src="assets/features/03-agent-choice.jpg" alt="Choose a coding agent and model in Amble." width="407"></picture></a>
