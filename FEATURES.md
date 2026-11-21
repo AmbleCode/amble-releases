@@ -90,10 +90,10 @@ alongside the conversation and preview, with process controls in the workspace.
 ## Local models and routing
 
 Connect supported local model servers such as Ollama, LM Studio, or llama.cpp.
-Choose available models and manage provider routes and usage in Full interface.
+Choose available models and manage provider routes and usage in AI & agents settings.
 Model support depends on the agent and your hardware.
 
-Cloud sources retain named, host-stored key profiles and provider account setup. No model weights are bundled. Full interface exposes model routes and usage; local inference depends on hardware and agent support.
+Cloud sources retain named, host-stored key profiles and provider account setup. No model weights are bundled. Model routes and usage live in AI & agents settings; local inference depends on hardware and agent support.
 
 ## Agent work across computers
 
@@ -101,7 +101,7 @@ Prepare assignments for connected computers, choose their workspaces and models,
 and review the plan before starting. Follow the resulting agent conversations
 through Amble's existing orchestration controls.
 
-Owners retain host management. Developer access applies to selected projects, and trusted developer commands execute with the host account’s permissions. Shared conversations and device-labelled pending requests help teammates follow the same work; shared visibility does not assign file ownership. [Team guide](TEAMWORK.md).
+Owners hold the host’s authority and run with the host account’s permissions, so grant Owner access only to people you trust. Viewers get only the apps you share, never agents, source, terminals or settings. Shared conversations and device-labelled pending requests help teammates follow the same work; shared visibility does not assign file ownership. [Team guide](TEAMWORK.md).
 
 ## Schedules, activity, and notifications
 
@@ -117,10 +117,8 @@ Web, local, and mobile destinations retain their platform and account requiremen
 
 ## More in Amble
 
-- **Simplified and Full:** choose the presentation that suits you while keeping selected work, drafts, and running tasks.
-- **Library:** find recent work across computers, group projects, and connect supported sessions started in a terminal.
+- **Projects:** find recent work across computers, group projects, and connect supported sessions started in a terminal.
 - **Add-ons and plugins:** manage add-ons and interface plugins in one Plugins inventory, with each item's trust and compatibility checks. Add-ons are always on unless you switch an individual one off.
-- **Marketplace:** browse starters and templates. A catalog listing is not an installation, and community listings do not imply executable installation support.
 
 Capabilities depend on the installed build, connection role, platform, provider, plan, and configured services. The host must stay awake and connected for remote work.
 

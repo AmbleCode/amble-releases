@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.amblecode.com"><img src="assets/lyre-mark.png" alt="Amble" width="64" height="64"></a>
+  <a href="https://www.amblecode.com"><img src="assets/amble-mark.png" alt="Amble" width="64" height="64"></a>
 </p>
 
 <h1 align="center">Amble</h1>
@@ -36,7 +36,36 @@
 </p>
 
 <p align="center">
-  <img src="assets/lyre-hero.png" alt="Amble on a desktop and iPhone: an agent changes the Harbor Kitchen sample website while the desktop shows the running app" width="100%">
+  <img src="assets/amble-hero.png" alt="Amble, the Agentic Development Environment: a coding agent has built the Harbor Kitchen page, shown in a live preview beside the conversation" width="100%">
+</p>
+
+## What is an Agentic Development Environment?
+
+An IDE is built around you typing code. An **Agentic Development Environment** is built
+around agents doing the work while you direct and review it. Amble gives them a real
+place to work: your projects, terminals, Git worktrees and a live preview of the app they
+are building, all on **a computer you own**. You steer it from your phone.
+
+<table>
+  <tr>
+    <td width="33%" valign="top"><img src="assets/iphone-agents.png" alt="Amble on iPhone: projects, running agents and the connected computer"></td>
+    <td width="33%" valign="top"><img src="assets/iphone-convo.png" alt="Amble on iPhone: an agent edited two files and ran the tests, which passed"></td>
+    <td width="33%" valign="top"><img src="assets/iphone-preview.png" alt="Amble on iPhone: the Harbor Kitchen sample app running in a live preview"></td>
+  </tr>
+  <tr>
+    <td valign="top"><strong>1. Pick up your work.</strong> Your projects and running agents, on your computer.</td>
+    <td valign="top"><strong>2. Follow the agent.</strong> Every edit and command, and the tests it ran.</td>
+    <td valign="top"><strong>3. Try the result.</strong> The app the agent built, running in a live preview.</td>
+  </tr>
+</table>
+
+- **Agents do the work.** Run Claude Code, Codex, GitHub Copilot, OpenCode and Pi side by side, on your own keys or local models.
+- **Your computer is the home base.** Projects, previews and agents run there, with no Amble cloud account needed for local use.
+- **Any paired device steers it.** Follow, review and answer from a phone, tablet or another computer, directly or through an end-to-end encrypted relay.
+- **You stay in control.** Review the actual changes, decide what is shared, and revoke access at any time.
+
+<p align="center">
+  <a href="assets/amble-tour.mp4"><strong>▶ Watch a 30-second tour of the real workspace</strong></a>
 </p>
 
 ## Key Features
@@ -67,9 +96,8 @@
 
 **Teams and extras**
 
-- **Clear project access.** Owners manage the host, Developers get selected projects, and testers get only shared apps. Developer commands run with the host account's permissions, so grant them to trusted collaborators.
-- **Add-ons, plugins and marketplace.** Add-ons and interface plugins appear in one Plugins inventory with trust and compatibility checks. Marketplace listing is not installation.
-- **Simplified or Full interface.** Pick a lighter project, chat, preview flow or the dense workspace. Switching keeps your work and drafts.
+- **Clear access.** Owners hold the host's authority; Viewers get only the apps you share, never agents, source, terminals or settings. Revoke either at any time.
+- **Add-ons and plugins.** Tool extensions and interface plugins appear in one Plugins inventory with trust and compatibility checks. Listing is not installation.
 - **Local first.** Local projects and local-network use need no Amble cloud account. Amble Cloud is a separate paid add-on that is still being rolled out.
 
 More detail on each: [Choose your coding agent](FEATURES.md#your-choice-of-coding-agent) ·
@@ -119,39 +147,39 @@ Requires **Node.js 22.12 or newer**, with npm. The initial npm release is verifi
 on **Windows x64 with Node.js 24**; installed macOS/Linux qualification is pending.
 
 ```sh
-npm install --global @lyrestudio/cli@beta
-lyre --version
-lyre --help
+npm install --global @amble/cli@beta
+amble --version
+amble --help
 ```
 
-If you already use Amble desktop, try `lyre status` to check the selected
+If you already use Amble desktop, try `amble status` to check the selected
 host. To run a standalone host from npm, start its background daemon:
 
 ```sh
-lyre daemon start
-lyre status
-lyre provider ls
+amble daemon start
+amble status
+amble provider ls
 ```
 
 Install and sign into a supported coding provider before starting an agent.
 From an existing project folder, this example uses Codex to explain the project:
 
 ```sh
-lyre project create .
-lyre run --provider codex --cwd . --task-mode ask "Explain this project without changing files."
-lyre ls
+amble project create .
+amble run --provider codex --cwd . --task-mode ask "Explain this project without changing files."
+amble ls
 ```
 
-Choose an available provider shown by `lyre provider ls`; replace `codex` if you
-use another. To follow a task, use `lyre logs AGENT_ID --follow`, replacing
-`AGENT_ID` with its ID from `lyre ls`. Use `lyre pair` to approve a trusted
+Choose an available provider shown by `amble provider ls`; replace `codex` if you
+use another. To follow a task, use `amble logs AGENT_ID --follow`, replacing
+`AGENT_ID` with its ID from `amble ls`. Use `amble pair` to approve a trusted
 client and obtain connection instructions; review the requested owner access.
 
-The npm CLI is **0.11.0-beta.3**, accompanying desktop **0.1.11**. The `lyre` and
-`lyre-foundation` commands are aliases for the same CLI. npm installs
+The npm CLI is **0.11.0-beta.3**, accompanying desktop **0.1.11**. The `amble` and
+`amble-foundation` commands are aliases for the same CLI. npm installs
 the required runtime packages automatically.
 
-[npm package](https://www.npmjs.com/package/@lyrestudio/cli) ·
+[npm package](https://www.npmjs.com/package/@amble/cli) ·
 [Full CLI walkthrough, updates and troubleshooting](INSTALL.md#command-line-interface)
 
 [Website CLI quickstart](https://www.amblecode.com/docs/cli-quickstart.html) ·
@@ -164,18 +192,18 @@ The CLI brings more of Amble's development workflow to your terminal:
 
 | Feature                    | How to use it                                                                                                                                                                                                                              |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Task modes**             | Use `lyre run --task-mode plan` to plan a change, `debug` to investigate a failure, `ask` for questions, or `multitask` for useful delegation when the provider has the tools. Use `agent` to carry out a change.                          |
+| **Task modes**             | Use `amble run --task-mode plan` to plan a change, `debug` to investigate a failure, `ask` for questions, or `multitask` for useful delegation when the provider has the tools. Use `agent` to carry out a change.                          |
 | **Separate Git worktrees** | Add `--new-workspace worktree --new-branch fix-login` to a run to work in a separate checkout. Reuse it later with `--workspace WORKSPACE_ID`.                                                                                             |
-| **Screenshot context**     | Send an image to an existing agent with `lyre send AGENT_ID --image screenshot.png "Explain this screenshot."`, then review the transfer prompt. The selected provider must support images.                                                |
-| **App preview setup**      | Inspect your project with `lyre preview inspect . --json`, review a configuration with `lyre preview plan . --port 5173 --json`, and control workspace services with `lyre script start` / `stop`. Agents and services stop independently. |
-| **Recurring agent tasks**  | Use `lyre schedule create` with a cadence, provider and task mode; inspect run history and pause or resume the schedule. The host must stay running.                                                                                       |
-| **Permission review**      | Use `lyre permit ls` to see pending requests, then approve or deny a specific request after reviewing it.                                                                                                                                  |
-| **Host plugins**           | Use `lyre plugin ls`, statically check a plugin with `lyre plugin check`, and review available updates with `lyre plugin update --all --check`. Install only code you trust.                                                               |
+| **Screenshot context**     | Send an image to an existing agent with `amble send AGENT_ID --image screenshot.png "Explain this screenshot."`, then review the transfer prompt. The selected provider must support images.                                                |
+| **App preview setup**      | Inspect your project with `amble preview inspect . --json`, review a configuration with `amble preview plan . --port 5173 --json`, and control workspace services with `amble script start` / `stop`. Agents and services stop independently. |
+| **Recurring agent tasks**  | Use `amble schedule create` with a cadence, provider and task mode; inspect run history and pause or resume the schedule. The host must stay running.                                                                                       |
+| **Permission review**      | Use `amble permit ls` to see pending requests, then approve or deny a specific request after reviewing it.                                                                                                                                  |
+| **Host plugins**           | Use `amble plugin ls`, statically check a plugin with `amble plugin check`, and review available updates with `amble plugin update --all --check`. Install only code you trust.                                                               |
 
 Task modes guide the request; they do not change permissions. Preview viewing,
 app-sharing invitations and whole-desktop control use the supported Amble clients.
 
-[**See complete CLI examples for these features →**](INSTALL.md#lyre-features-from-the-terminal)
+[**See complete CLI examples for these features →**](INSTALL.md#amble-features-from-the-terminal)
 
 ## Major features
 
@@ -187,8 +215,8 @@ Work with teammates on the same project from connected computers and mobile
 clients. See the work already underway, divide the next steps, and validate the
 result together.
 
-1. **Choose who can do what.** Grant Developer access to selected projects, keep
-   host management with Owners, and give testers access only to the apps you share.
+1. **Choose who can do what.** Owners hold the host's authority. Viewers get only
+   the apps you share, never agents, source, terminals or settings.
 2. **Follow the same work.** Open accessible agent conversations in the project's
    workspace to read requests and responses. Shared pending requests carry device
    labels, helping you spot a task that is already queued.
@@ -202,8 +230,8 @@ result together.
    branches, and let teammates try the running app on their devices.
 
 Shared visibility helps people avoid duplicate work; the team still agrees on
-ownership and reviews overlapping changes. Developer commands execute with the
-host account's permissions, so project grants are for trusted collaborators.
+ownership and reviews overlapping changes. Owner access runs with the host
+account's permissions, so grant it only to people you trust.
 Available controls depend on the connection role and installed versions.
 
 [**Set up your team and follow a complete workflow →**](TEAMWORK.md)
@@ -234,7 +262,7 @@ doesn't stop the other. Attach a preview screenshot to the next message when
 something looks off.
 
 <p align="center">
-  <img src="assets/desktop-studio.png" alt="Amble workspace with the Harbor Kitchen app running in a live preview beside the project" width="100%">
+  <img src="assets/workspace-preview.png" alt="Amble workspace: the Harbor Kitchen page running in a live preview beside the agent conversation, with three dishes in the basket" width="100%">
 </p>
 
 ### Review before you ship
@@ -245,7 +273,7 @@ keep iterating. A running app is something you can try; your checks decide wheth
 it's ready.
 
 <p align="center">
-  <img src="assets/review-changes.png" alt="Amble Changes view showing the actual diff for a sample website edit" width="100%">
+  <img src="assets/iphone-diff.png" alt="Amble Changes view on iPhone showing the actual diff for a sample website edit" width="32%">
 </p>
 
 ### Your models, your way
@@ -271,9 +299,9 @@ game you're building from your phone. Connect directly on your network or throug
 **end-to-end encrypted relay**. The host must stay awake and connected.
 
 <p align="center">
-  <img src="assets/phone-agent.png" alt="Reviewing an agent's completed change on iPhone" width="30%">&nbsp;
-  <img src="assets/phone-preview.png" alt="Trying the Harbor Kitchen sample website in Amble on iPhone" width="30%">&nbsp;
-  <img src="assets/phone-game.png" alt="Playing the Orbit Run sample browser game in Amble on iPhone" width="30%">
+  <img src="assets/iphone-files.png" alt="Browsing a project's files in Amble on iPhone" width="30%">&nbsp;
+  <img src="assets/iphone-publish.png" alt="The Publish flow for a web app in Amble on iPhone" width="30%">&nbsp;
+  <img src="assets/iphone-bots.png" alt="The Bots list in Amble on iPhone" width="30%">
 </p>
 
 ### Your whole desktop, built in
@@ -299,6 +327,13 @@ platform and plan; see [plans](https://www.amblecode.com/#pricing).
 running. **Schedules** run recurring agent tasks, and **notifications** tell you when
 work finishes or a preview becomes ready.
 
+### Flexibility with ready-made Add-ons
+
+Amble turns popular public projects into **Add-ons** you can try yourself. There is
+nothing to evaluate separately first: an Add-on works exactly like an **Extension**,
+with the same trust, compatibility and platform checks. Add one, try it, and remove
+it if it isn't for you.
+
 ## What's supported
 
 |                    | Supported today                                                                            |
@@ -313,17 +348,14 @@ work finishes or a preview becomes ready.
 | **Accounts**       | Local projects and local-network use need no Amble cloud account                            |
 
 <details>
-<summary><strong>More in the workspace: publishing, marketplace, plugins, and customization</strong></summary>
+<summary><strong>More in the workspace: publishing, plugins, and customization</strong></summary>
 
 - **Publish and deploy:** prepare mobile releases with integrated Fastlane tools, your
   signing setup, platform tooling, and store accounts. Setting up isn't the same as a
   completed store submission.
-- **Marketplace and plugins:** browse project starters and templates, and manage
-  executable host plugins. Community Extensions are a discovery catalog; extension
-  installation is unavailable.
-- **Simplified or Full:** choose a simpler project → chat → preview flow or a dense
-  development workspace. Switching keeps your selected work and drafts.
-- **Library and projects:** find recent work across computers, group projects, and
+- **Plugins:** one inventory for tool extensions and interface plugins. Design and Video
+  Editor come with the app; others install as add-ons.
+- **Projects:** find recent work across computers, group projects, and
   import sessions started in a terminal.
 
 </details>
