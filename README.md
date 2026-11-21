@@ -65,9 +65,7 @@ are building, all on **a computer you own**. You steer it from your phone.
 - **You stay in control.** Review the actual changes, decide what is shared, and revoke access at any time.
 
 <p align="center">
-  <a href="assets/amble-tour.mp4"><img src="assets/amble-tour.gif" alt="A 30-second tour of the real Amble workspace: the Harbor Kitchen page an agent built, running in a live preview with its Reserve dialog, menu and changed files" width="100%"></a>
-  <br>
-  <sub><a href="assets/amble-tour.mp4">Watch the full-quality video</a></sub>
+  <img src="assets/workspace-reserve.png" alt="The Amble workspace: the Harbor Kitchen page an agent built, running in a live preview with its Reserve a table dialog open, and the changed files beside it" width="100%">
 </p>
 
 ## A thin client for your agentic development studio
