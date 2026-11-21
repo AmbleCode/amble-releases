@@ -303,7 +303,7 @@ it's ready.
 Local inference depends on your hardware and the chosen agent's model support.
 
 <p align="center">
-  <img src="assets/model-choice.png" alt="Amble Connections screen showing model-source choices and setup actions" width="100%">
+  <img src="assets/models-phone.png" alt="Amble's Providers & keys screen at phone width: Anthropic, OpenAI, Copilot and OpenCode, each with its setup status, and an Add key button" width="45%">
 </p>
 
 ### Continue on any device
