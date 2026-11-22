@@ -168,7 +168,7 @@ Requires **Node.js 22.12 or newer**, with npm. The initial npm release is verifi
 on **Windows x64 with Node.js 24**; installed macOS/Linux qualification is pending.
 
 ```sh
-npm install --global @amble/cli@beta
+npm install --global @amblecode/cli
 amble --version
 amble --help
 ```
@@ -196,11 +196,10 @@ use another. To follow a task, use `amble logs AGENT_ID --follow`, replacing
 `AGENT_ID` with its ID from `amble ls`. Use `amble pair` to approve a trusted
 client and obtain connection instructions; review the requested owner access.
 
-The npm CLI is **0.11.0-beta.3**, accompanying desktop **0.1.11**. The `amble` and
-`amble-foundation` commands are aliases for the same CLI. npm installs
+The npm CLI is **0.16.0-beta.2** and installs the `amble` command. npm installs
 the required runtime packages automatically.
 
-[npm package](https://www.npmjs.com/package/@amble/cli) ·
+[npm package](https://www.npmjs.com/package/@amblecode/cli) ·
 [Full CLI walkthrough, updates and troubleshooting](INSTALL.md#command-line-interface)
 
 [Website CLI quickstart](https://www.amblecode.com/docs/cli-quickstart.html) ·

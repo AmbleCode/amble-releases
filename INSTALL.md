@@ -47,7 +47,7 @@ when a public or testing channel is available.
 
 ## Command-line interface
 
-The [Amble CLI](https://www.npmjs.com/package/@amble/cli) lets you
+The [Amble CLI](https://www.npmjs.com/package/@amblecode/cli) lets you
 control projects, workspaces and agents from a terminal. It also includes a host
 daemon for a computer that runs Amble without the desktop app. The daemon runs
 projects and coding agents; a connected Amble client provides the graphical
@@ -65,16 +65,14 @@ Install **Node.js 22.12 or newer** with npm, then open a terminal and run:
 ```sh
 node --version
 npm --version
-npm install --global @amble/cli@beta
+npm install --global @amblecode/cli
 amble --version
 amble --help
 ```
 
-The current npm version is **0.11.0-beta.3**. To select it explicitly, use
-`npm install --global @amble/cli@0.11.0-beta.3`. The npm CLI and desktop app
-have separate version numbers; this CLI accompanies desktop **0.1.6**.
-`amble`, `amble-foundation` and `paseo` are equivalent executable names, so help
-output may use `amble-foundation` even when you entered `amble`.
+The current npm version is **0.16.0-beta.2**. To select it explicitly, use
+`npm install --global @amblecode/cli@0.16.0-beta.2`. The npm CLI and desktop app
+have separate version numbers. The package installs the `amble` command.
 
 npm installs the runtime dependencies automatically. Coding providers still need
 their own installation and account or model setup.
@@ -289,7 +287,7 @@ installation while keeping its existing home and project folders:
 
 ```sh
 amble daemon stop
-npm install --global @amble/cli@beta
+npm install --global @amblecode/cli
 amble daemon start
 amble --version
 amble status
